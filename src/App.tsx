@@ -40,11 +40,11 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-200 via-purple-100 to-blue-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-soft-green via-green-50 to-vibrant-green/20 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
         {/* Logo */}
         <div className="flex justify-center mb-6">
-          <i className="fa-solid fa-cubes text-5xl text-blue-600"></i>
+          <i className="fa-solid fa-cubes text-5xl text-vibrant-green"></i>
         </div>
 
         {/* Header */}
@@ -52,7 +52,7 @@ function App() {
           <h1 className="text-2xl font-semibold text-gray-900 mb-2">
             Bem-vindo de volta
           </h1>
-          <p className="text-gray-500 text-sm">
+          <p className="text-solid-black/70 text-sm">
             Entre na sua conta para continuar
           </p>
         </div>
@@ -70,7 +70,7 @@ function App() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="seu@email.com"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 text-solid-black placeholder-gray-400"
             />
           </div>
 
@@ -85,14 +85,14 @@ function App() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 text-solid-black placeholder-gray-400"
             />
           </div>
 
           {/* Login Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="w-full bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-vibrant-green focus:ring-offset-2"
           >
             Entrar
           </button>
@@ -102,7 +102,7 @@ function App() {
         <div className="text-center mt-6">
           <p className="text-sm text-gray-600">
             Não tem uma conta?{' '}
-            <button className="text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
+            <button className="text-vibrant-green hover:text-vibrant-green/80 font-medium transition-colors duration-200">
               Cadastre-se
             </button>
           </p>

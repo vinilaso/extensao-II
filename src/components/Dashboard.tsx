@@ -79,7 +79,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
       <div className="w-64 bg-white shadow-sm border-r border-gray-200">
         <div className="p-6">
           <div className="flex items-center space-x-2">
-            <i className="fa-solid fa-cubes text-2xl text-blue-600"></i>
+            <i className="fa-solid fa-cubes text-2xl text-vibrant-green"></i>
             <span className="text-xl font-semibold text-gray-900">Dashboard</span>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               onClick={() => onNavigate(item.page)}
               className={`flex items-center px-6 py-3 text-sm font-medium transition-colors duration-200 ${
                 item.active
-                  ? 'text-blue-600 bg-blue-50 border-r-2 border-blue-600'
+                  ? 'text-vibrant-green bg-soft-green/30 border-r-2 border-vibrant-green'
                   : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
               } w-full text-left`}
             >
@@ -128,14 +128,14 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className={`p-2 rounded-lg ${
-                    card.color === 'blue' ? 'bg-blue-100' :
-                    card.color === 'green' ? 'bg-green-100' :
-                    'bg-purple-100'
+                    card.color === 'blue' ? 'bg-soft-green/30' :
+                    card.color === 'green' ? 'bg-vibrant-green/20' :
+                    'bg-gold-yellow/20'
                   }`}>
                     <card.icon className={`w-5 h-5 ${
-                      card.color === 'blue' ? 'text-blue-600' :
-                      card.color === 'green' ? 'text-green-600' :
-                      'text-purple-600'
+                      card.color === 'blue' ? 'text-vibrant-green' :
+                      card.color === 'green' ? 'text-vibrant-green' :
+                      'text-gold-yellow'
                     }`} />
                   </div>
                   <span className={`text-sm font-medium ${
@@ -168,8 +168,8 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
               <div className="space-y-4">
                 {recentActivities.map((activity, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <div className="p-2 bg-blue-100 rounded-lg">
-                      <FileText className="w-4 h-4 text-blue-600" />
+                    <div className="p-2 bg-soft-green/30 rounded-lg">
+                      <FileText className="w-4 h-4 text-vibrant-green" />
                     </div>
                     <div className="flex-1">
                       <p className="text-sm font-medium text-gray-900">

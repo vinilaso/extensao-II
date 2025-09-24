@@ -20,9 +20,9 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
   const [scheduledTime, setScheduledTime] = useState('');
 
   const platforms = [
-    { id: 'instagram', name: 'Instagram', icon: Instagram, color: 'bg-pink-100 text-pink-600 border-pink-200' },
-    { id: 'facebook', name: 'Facebook', icon: Facebook, color: 'bg-blue-100 text-blue-600 border-blue-200' },
-    { id: 'linkedin', name: 'LinkedIn', icon: Linkedin, color: 'bg-blue-100 text-blue-600 border-blue-200' }
+    { id: 'instagram', name: 'Instagram', icon: Instagram, color: 'bg-gold-yellow/20 text-gold-yellow border-gold-yellow/30' },
+    { id: 'facebook', name: 'Facebook', icon: Facebook, color: 'bg-vibrant-green/20 text-vibrant-green border-vibrant-green/30' },
+    { id: 'linkedin', name: 'LinkedIn', icon: Linkedin, color: 'bg-vibrant-green/20 text-vibrant-green border-vibrant-green/30' }
   ];
 
   const togglePlatform = (platformId: string) => {
@@ -65,7 +65,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
                 value={postContent}
                 onChange={(e) => setPostContent(e.target.value)}
                 placeholder="Digite o conteúdo da sua postagem..."
-                className="w-full h-32 px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-400 resize-none"
+                className="w-full h-32 px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 text-solid-black placeholder-gray-400 resize-none"
               />
               
               <button className="flex items-center mt-4 text-gray-600 hover:text-gray-900 transition-colors duration-200">
@@ -114,7 +114,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
                       type="date"
                       value={scheduledDate}
                       onChange={(e) => setScheduledDate(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 text-solid-black"
                     />
                     <Calendar className="absolute right-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
                   </div>
@@ -128,7 +128,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
                       type="time"
                       value={scheduledTime}
                       onChange={(e) => setScheduledTime(e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 text-solid-black"
                     />
                     <Clock className="absolute right-3 top-3 w-5 h-5 text-gray-400 pointer-events-none" />
                   </div>
@@ -145,7 +145,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
                   Pré-visualização
                 </h2>
                 {selectedPlatforms.includes('instagram') && (
-                  <div className="flex items-center text-pink-600">
+                  <div className="flex items-center text-gold-yellow">
                     <Instagram className="w-4 h-4 mr-1" />
                     <span className="text-sm font-medium">Instagram</span>
                   </div>
@@ -158,7 +158,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
                   {postContent ? (
                     <div className="text-left">
                       <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mr-3"></div>
+                        <div className="w-8 h-8 bg-gradient-to-r from-vibrant-green to-gold-yellow rounded-full mr-3"></div>
                         <span className="font-medium text-gray-900">seu_perfil</span>
                       </div>
                       <p className="text-gray-900 text-sm leading-relaxed">
@@ -172,8 +172,8 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
               </div>
 
               {scheduledDate && scheduledTime && (
-                <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-                  <p className="text-sm text-blue-800">
+                <div className="mt-4 p-3 bg-soft-green/30 rounded-lg">
+                  <p className="text-sm text-vibrant-green">
                     <strong>Agendado para:</strong> {new Date(scheduledDate).toLocaleDateString('pt-BR')} às {scheduledTime}
                   </p>
                 </div>
@@ -184,7 +184,7 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
 
         {/* Schedule Button */}
         <div className="mt-8 flex justify-end">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          <button className="bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-vibrant-green focus:ring-offset-2">
             Agendar Postagem
           </button>
         </div>

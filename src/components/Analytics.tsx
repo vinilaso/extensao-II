@@ -91,6 +91,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
               </p>
             </div>
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center">
+            <button className="bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center">
               <Download className="w-4 h-4 mr-2" />
               Exportar Relatório
             </button>
@@ -106,7 +107,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
               <select
                 value={selectedPeriod}
                 onChange={(e) => setSelectedPeriod(e.target.value)}
-                className="px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent text-sm"
               >
                 {periods.map((period) => (
                   <option key={period.value} value={period.value}>
@@ -170,7 +171,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
                         <div 
                           className={`h-2 rounded-full ${service.color}`}
                           style={{ width: `${service.percentage}%` }}
-                        ></div>
+                      className={`h-2 rounded-full ${
+                        index === 0 ? 'bg-vibrant-green' :
+                        index === 1 ? 'bg-gold-yellow' :
+                        index === 2 ? 'bg-soft-green' :
+                        'bg-vibrant-green/60'
+                      }`}
                       </div>
                     </div>
                   </div>
@@ -219,7 +225,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                           campaign.status === 'Ativa' 
-                            ? 'bg-green-100 text-green-800' 
+                            ? 'bg-vibrant-green/20 text-vibrant-green' 
                             : 'bg-gray-100 text-gray-800'
                         }`}>
                           {campaign.status}
@@ -250,10 +256,10 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Recomendações Estratégicas
           </h2>
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200 p-6">
+          <div className="bg-gradient-to-r from-soft-green/30 to-vibrant-green/20 rounded-lg border border-vibrant-green/30 p-6">
             <div className="flex items-start space-x-4">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <Target className="w-6 h-6 text-blue-600" />
+              <div className="p-2 bg-vibrant-green/20 rounded-lg">
+                <Target className="w-6 h-6 text-vibrant-green" />
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -265,7 +271,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ onBack }) => {
                   alcançar mais clientes.
                 </p>
                 <div className="flex items-center space-x-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center">
+                  <button className="bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center">
                     <DollarSign className="w-4 h-4 mr-2" />
                     Criar Campanha
                   </button>
