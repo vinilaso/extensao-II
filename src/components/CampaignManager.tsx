@@ -135,13 +135,13 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Ativa':
-        return 'bg-green-100 text-green-800';
+        return 'bg-vibrant-green/20 text-vibrant-green';
       case 'Pausada':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-gold-yellow/20 text-gold-yellow';
       case 'Finalizada':
         return 'bg-gray-100 text-gray-800';
       case 'Rascunho':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-soft-green/30 text-vibrant-green';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -189,7 +189,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                       onChange={handleInputChange}
                       required
                       placeholder="Ex: Promoção de Verão - Hospedagem"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                     />
                   </div>
 
@@ -203,7 +203,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                       value={formData.objective}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                     >
                       {objectives.map((obj) => (
                         <option key={obj.value} value={obj.value}>
@@ -224,7 +224,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                       onChange={handleInputChange}
                       rows={3}
                       placeholder="Descreva os detalhes da sua campanha..."
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200 resize-none"
                     />
                   </div>
                 </div>
@@ -249,7 +249,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                       required
                       min="1"
                       placeholder="1000"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                     />
                   </div>
 
@@ -265,7 +265,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                         value={formData.startDate}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                       />
                     </div>
                     <div>
@@ -279,7 +279,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                         value={formData.endDate}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                       />
                     </div>
                   </div>
@@ -303,7 +303,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                     onChange={handleInputChange}
                     required
                     placeholder="Ex: Donos de pets, 25-45 anos, região metropolitana"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-vibrant-green focus:border-transparent transition-all duration-200"
                   />
                 </div>
               </div>
@@ -318,7 +318,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                 </button>
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
+                  className="px-6 py-3 bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium rounded-lg transition-colors duration-200"
                 >
                   Criar Campanha
                 </button>
@@ -353,7 +353,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
             </div>
             <button 
               onClick={() => setShowCreateForm(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center"
+              className="bg-vibrant-green hover:bg-vibrant-green/90 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 flex items-center"
             >
               <Plus className="w-4 h-4 mr-2" />
               Nova Campanha
@@ -365,7 +365,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-2">
-              <Target className="w-8 h-8 text-blue-600" />
+              <Target className="w-8 h-8 text-vibrant-green" />
               <span className="text-sm font-medium text-green-600">+12%</span>
             </div>
             <p className="text-2xl font-semibold text-gray-900">3</p>
@@ -374,7 +374,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
           
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-2">
-              <Eye className="w-8 h-8 text-green-600" />
+              <Eye className="w-8 h-8 text-vibrant-green" />
               <span className="text-sm font-medium text-green-600">+18%</span>
             </div>
             <p className="text-2xl font-semibold text-gray-900">29.5k</p>
@@ -383,7 +383,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
           
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-2">
-              <MousePointer className="w-8 h-8 text-purple-600" />
+              <MousePointer className="w-8 h-8 text-gold-yellow" />
               <span className="text-sm font-medium text-green-600">+25%</span>
             </div>
             <p className="text-2xl font-semibold text-gray-900">3.37k</p>
@@ -392,7 +392,7 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
           
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center justify-between mb-2">
-              <DollarSign className="w-8 h-8 text-orange-600" />
+              <DollarSign className="w-8 h-8 text-gold-yellow" />
               <span className="text-sm font-medium text-red-600">-5%</span>
             </div>
             <p className="text-2xl font-semibold text-gray-900">R$ 1.620</p>
@@ -467,18 +467,18 @@ const CampaignManager: React.FC<CampaignManagerProps> = ({ onBack }) => {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex items-center space-x-2">
-                        <button className="text-blue-600 hover:text-blue-900 transition-colors duration-200">
+                        <button className="text-vibrant-green hover:text-vibrant-green/80 transition-colors duration-200">
                           <Edit3 className="w-4 h-4" />
                         </button>
-                        <button className="text-green-600 hover:text-green-900 transition-colors duration-200">
+                        <button className="text-gold-yellow hover:text-gold-yellow/80 transition-colors duration-200">
                           <BarChart3 className="w-4 h-4" />
                         </button>
                         {campaign.status === 'Ativa' ? (
-                          <button className="text-yellow-600 hover:text-yellow-900 transition-colors duration-200">
+                          <button className="text-gold-yellow hover:text-gold-yellow/80 transition-colors duration-200">
                             <Pause className="w-4 h-4" />
                           </button>
                         ) : campaign.status === 'Pausada' ? (
-                          <button className="text-green-600 hover:text-green-900 transition-colors duration-200">
+                          <button className="text-vibrant-green hover:text-vibrant-green/80 transition-colors duration-200">
                             <Play className="w-4 h-4" />
                           </button>
                         ) : null}
