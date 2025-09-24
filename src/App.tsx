@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Dashboard from './components/Dashboard';
 import PostScheduler from './components/PostScheduler';
 import Analytics from './components/Analytics';
+import CampaignManager from './components/CampaignManager';
 
 function App() {
   const [email, setEmail] = useState('');
@@ -31,6 +32,9 @@ function App() {
     }
     if (currentPage === 'analytics') {
       return <Analytics onBack={handleBackToDashboard} />;
+    }
+    if (currentPage === 'campaigns') {
+      return <CampaignManager onBack={handleBackToDashboard} />;
     }
     return <Dashboard onNavigate={handleNavigation} />;
   }
