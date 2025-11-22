@@ -53,9 +53,9 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column - Content Creation */}
-          <div className="space-y-6">
+        <div className="space-y-8">
+          {/* Content and Configuration Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Post Content */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-4">
@@ -137,48 +137,46 @@ const PostScheduler: React.FC<PostSchedulerProps> = ({ onBack }) => {
             </div>
           </div>
 
-          {/* Right Column - Preview */}
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-semibold text-gray-900">
-                  Pré-visualização
-                </h2>
-                {selectedPlatforms.includes('instagram') && (
-                  <div className="flex items-center text-gold-yellow">
-                    <Instagram className="w-4 h-4 mr-1" />
-                    <span className="text-sm font-medium">Instagram</span>
-                  </div>
-                )}
-              </div>
-              
-              {/* Mock Instagram Post Preview */}
-              <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                <div className="text-center text-gray-500 py-8">
-                  {postContent ? (
-                    <div className="text-left">
-                      <div className="flex items-center mb-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-vibrant-green to-gold-yellow rounded-full mr-3"></div>
-                        <span className="font-medium text-gray-900">seu_perfil</span>
-                      </div>
-                      <p className="text-gray-900 text-sm leading-relaxed">
-                        {postContent}
-                      </p>
-                    </div>
-                  ) : (
-                    'Sua postagem aparecerá aqui...'
-                  )}
-                </div>
-              </div>
-
-              {scheduledDate && scheduledTime && (
-                <div className="mt-4 p-3 bg-soft-green/30 rounded-lg">
-                  <p className="text-sm text-vibrant-green">
-                    <strong>Agendado para:</strong> {new Date(scheduledDate).toLocaleDateString('pt-BR')} às {scheduledTime}
-                  </p>
+          {/* Preview Row */}
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-gray-900">
+                Pré-visualização
+              </h2>
+              {selectedPlatforms.includes('instagram') && (
+                <div className="flex items-center text-gold-yellow">
+                  <Instagram className="w-4 h-4 mr-1" />
+                  <span className="text-sm font-medium">Instagram</span>
                 </div>
               )}
             </div>
+            
+            {/* Mock Instagram Post Preview */}
+            <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+              <div className="text-center text-gray-500 py-8">
+                {postContent ? (
+                  <div className="text-left">
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-vibrant-green to-gold-yellow rounded-full mr-3"></div>
+                      <span className="font-medium text-gray-900">seu_perfil</span>
+                    </div>
+                    <p className="text-gray-900 text-sm leading-relaxed">
+                      {postContent}
+                    </p>
+                  </div>
+                ) : (
+                  'Sua postagem aparecerá aqui...'
+                )}
+              </div>
+            </div>
+
+            {scheduledDate && scheduledTime && (
+              <div className="mt-4 p-3 bg-soft-green/30 rounded-lg">
+                <p className="text-sm text-vibrant-green">
+                  <strong>Agendado para:</strong> {new Date(scheduledDate).toLocaleDateString('pt-BR')} às {scheduledTime}
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
